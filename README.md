@@ -1,3 +1,15 @@
+#About the project
+I have created this app as a Proof of Concept.The app has a single page that lists products from a JSON sent by an API. 
+#Features
+* Lists all the products on the page.
+* On hovering on products ,available options for the product are shown.
+* Each product's options are clickable.
+* Once an option for a product is clicked; a popup appears ,that shows the      selected product(along with the option chosen)  and has an "Add to Cart" button
+* Cart displays product quantity as well as lists each chosen product(as well as the option)
+* Products in the page can be filtered by choosing the available filters.
+*The application is responsive(flex-box has been used).
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
