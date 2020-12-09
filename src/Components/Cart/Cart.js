@@ -1,5 +1,6 @@
 import {Modal,Button } from 'react-bootstrap';
 import {Consumer} from "../../Context";
+import removeIcon from "../../assets/removeIcon.png";
 import  "./Cart.css";
 import React  from 'react';
 
@@ -17,6 +18,7 @@ function Cart(props){
          
           <h4>Item specifications:</h4>
          {context.cart.map((product,id)=>(<div className="item" key={id}><p>{product.item} : {product.spec}</p>
+                                            <img src={removeIcon} onClick={()=>context.removeFromCart(product)}  width="25" height="25" alt="remove"/>
                                    </div>))} 
         </Modal.Body>
         <Modal.Footer>

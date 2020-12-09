@@ -4,3 +4,6 @@
     padding:4px;
     border-radius:2%;
 }
+.item img{
+    cursor:pointer;
+}

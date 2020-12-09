@@ -37,6 +37,14 @@ class App extends Component {
       }
     this.setState(prevState=>({modalShow:!prevState.modalShow}));
   }
+  removeFromCart=(prod)=>{
+    console.log("in remove Cart");
+    let newCart=this.state.cart.filter(cartItem=>{
+      return prod.item!=cartItem.item && prod.spec!=cartItem.spec
+    });
+    this.setState({cart:newCart});
+    console.log(newCart);
+  }
   componentDidMount(){
     axios.get('https://cdn.shopify.com/s/files/1/0341/4907/3029/files/products.json?v=1607317366'
     )
@@ -79,13 +87,13 @@ class App extends Component {
        }
     return (
       <div className="App">
-      <Provider  value={{cart:this.state.cart,modalShow:this.state.modalShow,modalToggle:this.modalToggleHandler,addToSelection:this.addToSelection,selection:this.state.selection,addToCart:this.addToCart,toggleCartShow:this.toggleCartShow,showCart:this.state.showCart}}>
+      <Provider  value={{cart:this.state.cart,modalShow:this.state.modalShow,modalToggle:this.modalToggleHandler,addToSelection:this.addToSelection,selection:this.state.selection,addToCart:this.addToCart,toggleCartShow:this.toggleCartShow,showCart:this.state.showCart,removeFromCart:this.removeFromCart}}>
          <Header/>
          <div className="subNav">
          <h3>{this.state.filterChosen}({this.state.count})</h3>
            <div>Filters: 
            <ButtonGroup className="mb-2">
-                  <Button active onClick={()=>this.applyFilter("All Products")}>All Products</Button>
+                  <Button onClick={()=>this.applyFilter("All Products")}>All Products</Button>
                   <Button onClick={()=>this.applyFilter("T-shirt")}>Tee Shirt</Button>
                   <Button onClick={()=>this.applyFilter("Denim")}>Denim</Button>
                   <Button onClick={()=>this.applyFilter("Sweatshirt")}>Sweatshirts</Button>
