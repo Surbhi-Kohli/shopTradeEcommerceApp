@@ -1,6 +1,8 @@
-#About the project
+# About the project
 I have created this app as a Proof of Concept.The app has a single page that lists products from a JSON sent by an API. 
-#Features
+
+
+# Features
 * Lists all the products on the page.
 * On hovering on products ,available options for the product are shown.
 * Each product's options are clickable.
