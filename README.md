@@ -4,7 +4,7 @@ I have created this app as a Proof of Concept.The app has a single page that lis
 # Images
 ![Snap1](./Snip1.PNG)
 ![Snap2](./SnipFilterOption.PNG)
-![Snap3](./SnipFilterOption.PNG)
+![Snap3](./CartSnip.PNG)
 
 # Features #
 * Lists all the products on the page.
@@ -12,6 +12,7 @@ I have created this app as a Proof of Concept.The app has a single page that lis
 * Each product's options are clickable.
 * Once an option for a product is clicked; a popup appears ,that shows the      selected product(along with the option chosen)  and has an "Add to Cart" button
 * Cart displays product quantity as well as lists each chosen product(as well as the option)
+* The products currently in the cart can be removed.
 * Products in the page can be filtered by choosing the available filters.
 * The application is responsive(flex-box has been used).
 
