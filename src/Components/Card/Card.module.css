@@ -1,0 +1,52 @@
+.Card{
+     width:350px;
+    box-sizing:border-box;
+    padding:5px;
+    margin-bottom:5px;
+    border:none;
+    height:485px;
+    /* height:30%; */
+}
+.Card:hover .footer{
+  visibility: visible;
+  
+}
+.cardBody
+{
+ padding:0.25rem 1.25rem; 
+ height: 25%;
+ flex: 0 1 auto;
+   /* to overwrite flex:1 1 auto of card-body of bootstrap */
+}
+.Image{
+    height:60%;
+}
+.cost{
+    display:flex;
+    justify-content:center;
+    margin:6px;
+    padding: 0 1.25rem;
+}
+.footer{
+   visibility:hidden;
+   display:flex;
+   justify-content:center;
+   margin:5px;
+   padding: 0.25rem 0.25rem;
+   transition: visibility .025s;
+}
+.option{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    font-size:13px;
+    width:58px;
+    border:1px solid #4e8d7c;
+    cursor:pointer
+}
+.discount{
+   color:red;
+}
+.textMuted{
+    margin-right: 4px;
+}
