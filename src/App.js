@@ -9,16 +9,7 @@ import './App.css';
 import { Provider } from "./Context";
 class App extends Component {
   
-  state={
-    data:[],
-    filter:[],
-    modalShow:false,
-    filterChosen:"All Products",
-    count:0,
-    selection:{},
-    cart:[],
-    showCart:false
-  }
+  
   addToCart=(item,spec)=>{
     this.setState({cart: this.state.cart.concat([{item,spec}])},()=>console.log(this.state.cart));
      this.modalToggleHandler();
@@ -29,7 +20,7 @@ class App extends Component {
       console.log(this.state.showCart+" is the cart state");
     });
   }
-  modalToggleHandler=()=>{
+modalToggleHandler=()=>{
     console.log("in close Handler");
       if(this.state.modalShow)
       {
@@ -74,6 +65,22 @@ class App extends Component {
     console.log(filterArray);
     this.setState({filter:filterArray});
   }
+  state={
+    data:[],
+    filter:[],
+    modalShow:false,
+    filterChosen:"All Products",
+    count:0,
+    selection:{},
+    cart:[],
+    showCart:false,
+    addToCart:this.addToCart,
+    toggleCartShow:this.toggleCartShow,
+    modalToggleHandler:this.modalToggleHandler,
+    removeFromCart:this.removeFromCart,
+    addToSelection:this.addToSelection,
+    applyFilter:this.applyFilter
+  }
   render(){
     let app=null;
      if(this.state.data)
@@ -87,7 +94,8 @@ class App extends Component {
        }
     return (
       <div className="App">
-      <Provider  value={{cart:this.state.cart,modalShow:this.state.modalShow,modalToggle:this.modalToggleHandler,addToSelection:this.addToSelection,selection:this.state.selection,addToCart:this.addToCart,toggleCartShow:this.toggleCartShow,showCart:this.state.showCart,removeFromCart:this.removeFromCart}}>
+     <Provider value={this.state}> 
+      {/* <Provider  value={{cart:this.state.cart,modalShow:this.state.modalShow,modalToggleHandler:this.modalToggleHandler,addToSelection:this.addToSelection,selection:this.state.selection,addToCart:this.addToCart,toggleCartShow:this.toggleCartShow,showCart:this.state.showCart,removeFromCart:this.removeFromCart}}>  */}
          <Header/>
          <div className="subNav">
          <h3>{this.state.filterChosen}({this.state.count})</h3>

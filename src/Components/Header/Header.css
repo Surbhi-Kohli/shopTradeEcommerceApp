@@ -3,7 +3,11 @@
     margin-left:2px;
      font-size:24px
 }
-
+.header{
+    position:sticky;
+    top:2px;
+    z-index:100;
+}
 sup{
     background:#b8d5cd;
 }
