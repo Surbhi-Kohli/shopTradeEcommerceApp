@@ -1,6 +1,8 @@
 # About the project #
 I have created this app as a Proof of Concept.The app has a single page that lists products from a JSON sent by an API. 
 
+This application is published at  https://Surbhi-Kohli.github.io/shopTradeEcommerceApp/
+
 # Images
 ![Snap1](./Snip1.PNG)
 ![Snap2](./SnipFilterOption.PNG)
