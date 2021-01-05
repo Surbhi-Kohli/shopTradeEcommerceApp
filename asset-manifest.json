@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/shopTradeEcommerceApp/static/css/main.bf367d8f.chunk.css",
-    "main.js": "/shopTradeEcommerceApp/static/js/main.23aeb413.chunk.js",
-    "main.js.map": "/shopTradeEcommerceApp/static/js/main.23aeb413.chunk.js.map",
-    "runtime-main.js": "/shopTradeEcommerceApp/static/js/runtime-main.a40df14e.js",
-    "runtime-main.js.map": "/shopTradeEcommerceApp/static/js/runtime-main.a40df14e.js.map",
+    "main.css": "/shopTradeEcommerceApp/static/css/main.03377999.chunk.css",
+    "main.js": "/shopTradeEcommerceApp/static/js/main.abbfe3c6.chunk.js",
+    "main.js.map": "/shopTradeEcommerceApp/static/js/main.abbfe3c6.chunk.js.map",
+    "runtime-main.js": "/shopTradeEcommerceApp/static/js/runtime-main.50d3cd92.js",
+    "runtime-main.js.map": "/shopTradeEcommerceApp/static/js/runtime-main.50d3cd92.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/shopTradeEcommerceApp/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.ad0dd6af.chunk.js": "/shopTradeEcommerceApp/static/js/2.ad0dd6af.chunk.js",
-    "static/js/2.ad0dd6af.chunk.js.map": "/shopTradeEcommerceApp/static/js/2.ad0dd6af.chunk.js.map",
-    "static/js/3.6f1bd5d9.chunk.js": "/shopTradeEcommerceApp/static/js/3.6f1bd5d9.chunk.js",
-    "static/js/3.6f1bd5d9.chunk.js.map": "/shopTradeEcommerceApp/static/js/3.6f1bd5d9.chunk.js.map",
+    "static/js/2.98b4e44f.chunk.js": "/shopTradeEcommerceApp/static/js/2.98b4e44f.chunk.js",
+    "static/js/2.98b4e44f.chunk.js.map": "/shopTradeEcommerceApp/static/js/2.98b4e44f.chunk.js.map",
+    "static/js/3.2355cb08.chunk.js": "/shopTradeEcommerceApp/static/js/3.2355cb08.chunk.js",
+    "static/js/3.2355cb08.chunk.js.map": "/shopTradeEcommerceApp/static/js/3.2355cb08.chunk.js.map",
     "index.html": "/shopTradeEcommerceApp/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/shopTradeEcommerceApp/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.bf367d8f.chunk.css.map": "/shopTradeEcommerceApp/static/css/main.bf367d8f.chunk.css.map",
-    "static/js/2.ad0dd6af.chunk.js.LICENSE.txt": "/shopTradeEcommerceApp/static/js/2.ad0dd6af.chunk.js.LICENSE.txt"
+    "static/css/main.03377999.chunk.css.map": "/shopTradeEcommerceApp/static/css/main.03377999.chunk.css.map",
+    "static/js/2.98b4e44f.chunk.js.LICENSE.txt": "/shopTradeEcommerceApp/static/js/2.98b4e44f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a40df14e.js",
+    "static/js/runtime-main.50d3cd92.js",
     "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.ad0dd6af.chunk.js",
-    "static/css/main.bf367d8f.chunk.css",
-    "static/js/main.23aeb413.chunk.js"
+    "static/js/2.98b4e44f.chunk.js",
+    "static/css/main.03377999.chunk.css",
+    "static/js/main.abbfe3c6.chunk.js"
   ]
 }
