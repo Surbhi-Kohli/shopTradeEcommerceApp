@@ -98,8 +98,8 @@ modalToggleHandler=()=>{
       {/* <Provider  value={{cart:this.state.cart,modalShow:this.state.modalShow,modalToggleHandler:this.modalToggleHandler,addToSelection:this.addToSelection,selection:this.state.selection,addToCart:this.addToCart,toggleCartShow:this.toggleCartShow,showCart:this.state.showCart,removeFromCart:this.removeFromCart}}>  */}
          <Header/>
          <div className="subNav">
-         <h3>{this.state.filterChosen}({this.state.count})</h3>
-           <div>Filters: 
+        <div> <h3>{this.state.filterChosen}({this.state.count})</h3></div>
+          <div> Filters: 
            <ButtonGroup className="mb-2">
                   <Button onClick={()=>this.applyFilter("All Products")}>All Products</Button>
                   <Button onClick={()=>this.applyFilter("T-shirt")}>Tee Shirt</Button>

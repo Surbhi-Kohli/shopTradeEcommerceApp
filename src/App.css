@@ -14,6 +14,7 @@
 }
 .subNav{
   display:flex;
+  flex-wrap: wrap;
   margin:5px 18px;
   justify-content: space-between;
 }
@@ -40,11 +41,10 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 600px) {
+  .mb-2 {
+    background-color: lightblue;
+    display:flex;
+    flex-wrap:wrap;
   }
 }

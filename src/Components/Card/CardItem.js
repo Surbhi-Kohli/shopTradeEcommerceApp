@@ -4,19 +4,19 @@ import {shopContext} from "../../Context";
 import classes from "./Card.module.css";
 function CardItem(props){
     const contextValue = useContext(shopContext);
-    const [selectedOption,setSelectedOption]=useState([]);
-    const [option,setOption]=useState('');
+    /* useContext lets you “use” context without a Consumer
+    The only thing to watch out for is that you have to pass the whole 
+    context object to useContext – not just the Consumer!  */
+console.log(contextValue);
     let discount=(props.item.compare_at_price-props.item.price)/props.item.compare_at_price*100;
      discount=Math.round(discount);
    
    function optionSelected(selection,option){
-      
-    contextValue.modalToggle();
+    contextValue.modalToggleHandler(); //To change values in context state
+    /*Because of useContext,we could use the context without the consumer    */
     contextValue.addToSelection(selection,option);
-    //shopContext.addToCart(selection,option);
     }
     return (
-      
           <div>
             <Card className={classes.Card}>
               <Card.Img
@@ -45,7 +45,6 @@ function CardItem(props){
                   key={id}
                     className={classes.option}
                     onClick={() => optionSelected(props.item.name,option.value)}
-                    // onClick={context.modalToggle}
                  >
                     <Card.Text>
                       <b>{option.value}</b>

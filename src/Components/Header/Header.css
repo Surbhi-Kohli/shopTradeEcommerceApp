@@ -11,3 +11,11 @@
 sup{
     background:#b8d5cd;
 }
+.icons input{
+    border-radius: 5px;
+    border: 1px solid silver
+}
+button.navbar-toggler.collapsed
+{
+    margin-right:auto
+}
