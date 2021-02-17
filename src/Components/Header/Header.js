@@ -5,42 +5,14 @@ import brandImage from "../../assets/favicon.png";
 import searchIcon from "../../assets/Search.png";
 import profileIcon from "../../assets/profile.png";
 import cartImage from "../../assets/Cart.png";
+import _ from 'lodash';
 import "./Header.css";
-function Header() {
+function Header(props) {
   console.log("render");
   const [search, setSearch] = useState("");
-  // function showSearch(e,delay)
-  // {
-  //   console.log(e.target.value);
-  //   setSearch(e.target.value);
-  //  console.log("hello")
-  //  debounce(expandSearch,e,delay)();
-  //  ;
-  // }
-  // let deb,showSearch;
-  // useEffect(()=>{
-  //    deb=function(fn) {
-  //     let interval; 
-  //     console.log("interval in deb is "+interval);
-  //     return function() {
-  //       console.log(interval + "is the interval");
-  //       clearTimeout(interval);
-  //       let context = this;
-  //       console.log("this is " + this);
-  //       let args = arguments;
-  //       console.log(arguments);
-  //       setSearch(arguments[0]);
-  //       interval = setTimeout(() => {
-  //         fn.apply(context, arguments);
-  //       },arguments[1]);
-  //     };
-  //   }
-  // }
-  //    showSearch = deb(expandSearch);
-  // },[])
-  function expandSearch(arg1, arg2) {
-    console.log("in expand search");
-  }
+  const throttled = React.useRef(_.debounce((newValue) => props.filterCallback(newValue), 5000))
+ 
+  useEffect(() => throttled.current(search), [search])
 
   return (
     <Consumer>
@@ -70,12 +42,12 @@ function Header() {
             </Nav>
           </Navbar.Collapse>
           <Nav.Item className="icons">
-            {/* <input
+            <input
               type="text"
               placeholder="Search"
               value={search}
-              onChange={e => showSearch(e.target.value, 4000)}
-            /> */}
+              onChange={e => setSearch(e.target.value)}
+            />
 
             <img
               alt=""

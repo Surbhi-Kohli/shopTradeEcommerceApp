@@ -51,18 +51,20 @@ modalToggleHandler=()=>{
    
   }
   applyFilter=(filterVal)=>{
+   
     this.setState({filterChosen:filterVal});
     if(filterVal=="All Products")
-    {
+    {  
       this.setState({filter:this.state.data});
       this.setState({count:this.state.data.length})
       return;
     }
+   
     let filterArray=this.state.data.filter(info=>{
-         return info.name.includes(filterVal) || info.tag.includes(filterVal);
+         return info.name.includes(filterVal)||info.tag.includes(filterVal)||info.vendor.includes(filterVal);
     })
+   
     this.setState({count:filterArray.length})
-    console.log(filterArray);
     this.setState({filter:filterArray});
   }
   state={
@@ -96,7 +98,7 @@ modalToggleHandler=()=>{
       <div className="App">
      <Provider value={this.state}> 
       {/* <Provider  value={{cart:this.state.cart,modalShow:this.state.modalShow,modalToggleHandler:this.modalToggleHandler,addToSelection:this.addToSelection,selection:this.state.selection,addToCart:this.addToCart,toggleCartShow:this.toggleCartShow,showCart:this.state.showCart,removeFromCart:this.removeFromCart}}>  */}
-         <Header/>
+         <Header filterCallback={this.applyFilter}/>
          <div className="subNav">
         <div> <h3>{this.state.filterChosen}({this.state.count})</h3></div>
           <div> Filters: 
